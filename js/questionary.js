@@ -116,8 +116,18 @@ addEvent(document.body,'click',function(event){
 	//处理题目之间的关联关系
 	if($('four2').checked==true||$('four3').checked==true||$('four4').checked==true){
 		$('beWork').style.display='list-item';
+		var inputWork=$('beWork').getElementsByTagName('input');
+		console.log(inputWork.length);
+		for(var i=0;i<inputWork.length;i++){
+			inputWork[i].required='required';
+		}
 	}else{
 		$('beWork').style.display='none';
+		var inputWork=$('beWork').getElementsByTagName('input');
+		console.log(inputWork.length);
+		for(var i=0;i<inputWork.length;i++){
+			inputWork[i].required=false;
+		}
 	}
 	var radioElements=getElementsByClassName('radio');
 	//判断复选框是否选中
