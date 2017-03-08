@@ -1,7 +1,7 @@
 /*全局样式*/
 body{
 	word-break: break-all;
-	font-family: "微软雅黑","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	font-family: "Microsoft YaHei","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
 }
 h5{font-weight: bold; padding-left: 15px;}
 h5 span{color: red;font-weight: bold;padding-left: 5px; font-size: 18px;}
