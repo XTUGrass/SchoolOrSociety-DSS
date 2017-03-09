@@ -2,3 +2,5 @@
 #### 基于数据的科学决策
 #### 系统地址：[https://crystalyy.github.io/SchoolOrSocietyDSS/](https://crystalyy.github.io/SchoolOrSocietyDSS/)
 ---
+- branch : django-demo
+- install: install python, django, bootstrap, pybrain, matplotlib, openpyxl
