@@ -49,9 +49,6 @@ addEvent($('sortFactors'),'click',function(event){
 			sortFactorsInput[i].value=nowNum;
 		}
 	}
-	for(var i=0;i<sortFactorsInput.length;i++){
-		console.log(sortFactorsInput[i].value);
-	}
 	
 		
 });
