@@ -2,8 +2,8 @@
 
 /*存放最终选择的影响因素的name的数组,已排序*/
 var sortFactorsArray=[];
-addEvent($('sortFactors'),'click',function(event){
-	var sortFactorsInput=$('sortFactors').getElementsByTagName('input');
+addEvent(document.getElementById('sortFactors'),'click',function(event){
+	var sortFactorsInput=document.getElementById('sortFactors').getElementsByTagName('input');
 	var tar=event.target||event.srcElement;
 
 	//解决label标签 触发两次点击事件的bug
@@ -37,7 +37,7 @@ addEvent($('sortFactors'),'click',function(event){
 	}else{
 	}
 	//计数
-	$('totalFactor1').innerHTML=sortFactorsArray.length;
+	document.getElementById('totalFactor1').innerHTML=sortFactorsArray.length;
 	//实时添加序号
 	for(var i=0;i<sortFactorsInput.length;i++){
 		var loca=sortFactorsArray.indexOf(sortFactorsInput[i].name);
@@ -55,12 +55,12 @@ addEvent($('sortFactors'),'click',function(event){
 
 //character计数器
 var count=0;
-addEvent($('character'),'click',function(event){
+addEvent(document.getElementById('character'),'click',function(event){
 	var tar=event.target||event.srcElement;
 	if(tar.nodeName.toLowerCase()=='label'){
 		return;
 	}
-	$('characters').style.borderWidth='0px';
+	document.getElementById('characters').style.borderWidth='0px';
 	var characterInput=this.getElementsByTagName('input');
 	for(var i=0;i<characterInput.length;i++){
 		characterInput[i].removeAttribute('disabled');
@@ -82,26 +82,26 @@ addEvent($('character'),'click',function(event){
 		}
 	}
 	
-	$('totalFactor2').innerHTML=count;
+	document.getElementById('totalFactor2').innerHTML=count;
 });
 
 
 
 //验证表单提交
-addEvent($('btn1'),'click',function(event){
+addEvent(document.getElementById('btn1'),'click',function(event){
 	if(sortFactorsArray.length==0){
-		$('locate1').click();
-		$('sortFactors').style.borderWidth='1px';
-		$('sortFactors').style.borderStyle='solid';
-		$('sortFactors').style.borderColor='#DC3522';
+		document.getElementById('locate1').click();
+		document.getElementById('sortFactors').style.borderWidth='1px';
+		document.getElementById('sortFactors').style.borderStyle='solid';
+		document.getElementById('sortFactors').style.borderColor='#DC3522';
 		event.preventDefault();
 		return false;
 	}
 	if(count==0){
-		$('locate2').click();
-		$('characters').style.borderWidth='1px';
-		$('characters').style.borderStyle='solid';
-		$('characters').style.borderColor='#DC3522';
+		document.getElementById('locate2').click();
+		document.getElementById('characters').style.borderWidth='1px';
+		document.getElementById('characters').style.borderStyle='solid';
+		document.getElementById('characters').style.borderColor='#DC3522';
 		event.preventDefault();
 		return false;
 	}
@@ -118,15 +118,15 @@ addEvent(document.body,'click',function(event){
 		return;
 	}
 	//处理题目之间的关联关系
-	if($('four2').checked==true||$('four3').checked==true||$('four4').checked==true){
-		$('beWork').style.display='list-item';
-		var inputWork=$('beWork').getElementsByTagName('input');
+	if(document.getElementById('four2').checked==true||document.getElementById('four3').checked==true||document.getElementById('four4').checked==true){
+		document.getElementById('beWork').style.display='list-item';
+		var inputWork=document.getElementById('beWork').getElementsByTagName('input');
 		for(var i=0;i<inputWork.length;i++){
 			inputWork[i].required='required';
 		}
 	}else{
-		$('beWork').style.display='none';
-		var inputWork=$('beWork').getElementsByTagName('input');
+		document.getElementById('beWork').style.display='none';
+		var inputWork=document.getElementById('beWork').getElementsByTagName('input');
 		for(var i=0;i<inputWork.length;i++){
 			inputWork[i].required=false;
 		}
@@ -157,7 +157,7 @@ addEvent(document.body,'click',function(event){
 			}
 		}
 	}
-	if(getStyle($('beWork'),'display')=='list-item'){
+	if(getStyle(document.getElementById('beWork'),'display')=='list-item'){
 		var percent=compeleCount/18*100;
 		var percentFixed=percent.toFixed(2);
 	}else{
@@ -165,13 +165,10 @@ addEvent(document.body,'click',function(event){
 		var percentFixed=percent.toFixed(2);
 	}
 	
-	$('completeNumber').innerHTML=percentFixed+'%';
-	$('inner').style.height=percentFixed/100*200+'px';
+	document.getElementById('completeNumber').innerHTML=percentFixed+'%';
+	document.getElementById('inner').style.height=percentFixed/100*200+'px';
 });
-
-function $(id){
-	return document.getElementById(id);
-}	
+	
 
 //从数组删除指定值元素
 Array.prototype.removeByValue = function(val) {

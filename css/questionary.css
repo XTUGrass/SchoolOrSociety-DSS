@@ -6,6 +6,13 @@ body{
 h5{font-weight: bold; padding-left: 15px;}
 h5 span{color: red;font-weight: bold;padding-left: 5px; font-size: 18px;}
 li{font-weight: bold; padding-bottom:15px; border-bottom: 1px solid #cccccc; margin-bottom: 30px;}
+
+/*验证样式*/
+/*错误提示*/
+.error{
+	font-size:14px;
+	margin-left: 5px;
+}
 /*--全局样式--*/
 .title{
 	background-color: #7E827A;
