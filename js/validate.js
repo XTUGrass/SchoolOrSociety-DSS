@@ -3,7 +3,6 @@ $(document).ready(function(){
 		errorPlacement: function(error, element) {
 			// Append error within linked label
 			$( element ).closest( "li" ).find('h5').append( error );
-			$('.error').html('required filed!');
 		},
 		errorElement: "span"
 	});

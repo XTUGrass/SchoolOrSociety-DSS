@@ -105,6 +105,22 @@ addEvent(document.getElementById('btn1'),'click',function(event){
 		event.preventDefault();
 		return false;
 	}
+	setTimeout(function(){
+		for(var i=0;i<getElementsByClassName('error').length;i++){
+			if(getElementsByClassName('error')[i].style.display!='none'){
+				var scrollHei=getElementsByClassName('error')[i].offsetTop;
+				console.log(scrollHei);
+				window.scrollTo(100,scrollHei);
+				break;
+			}
+		}
+			
+
+			/*
+			
+			*/
+	},300)
+	
 });
 
 //进度条以及处理题目之间的关联关系
