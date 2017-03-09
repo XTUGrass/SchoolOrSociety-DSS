@@ -1,0 +1,332 @@
+/*全局样式*/
+body{
+	word-break: break-all;
+	font-family: "Microsoft YaHei","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	color: #2f343b;
+}
+
+#systemBaseLine{
+	margin-top: -100px;
+}
+
+
+
+/*单独样式*/
+.header{
+	overflow: hidden;
+}
+.header h3{
+	line-height: 60px;
+	margin: 0px;
+}
+.masthead{
+	position: relative;
+	width:100%;
+	background: url(../img/masthead.jpg) left top no-repeat;
+	background-size:cover;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+.masthead .row{
+	position: absolute;
+	width:100%;
+	bottom: 120px;
+	left: 13%;
+}
+#assitImg{
+	display: none;
+}
+
+.masthead .container-fluid p.question{
+	font-size: 36px;
+	font-family: '隶书';
+	color: #703030;
+	/*
+	margin-top: 40%;
+	*/
+	margin-bottom: 30px;
+}
+.masthead .container-fluid p img{
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.masthead .container-fluid p.intro{
+	color: #703030;
+	font-size: 30px;
+	font-family: '楷体';
+	font-weight: bold;
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+.masthead .container-fluid p.choice{
+	width: 270px;
+	height: 50px;
+	background-color: #703030;
+	opacity: 0.7;
+	line-height: 50px;
+}
+.masthead .container-fluid p.choice a{
+	display: block;
+	color:#fff;
+	font-size: 20px;
+	opacity: 1;
+}
+.masthead .container-fluid p.choice span{
+	color: #fff;
+	font-size: 16px;
+	padding-left:5px;
+	position: relative;
+}
+
+.systemBase{
+	margin-bottom: 100px;
+	overflow: hidden;
+	display: none;
+}
+.systemBase .base1 p{
+	font-size: 30px;
+	font-family: '隶书';
+	line-height: 220px;	
+	text-align: center;
+}
+
+.systemBase .base2 .brief{
+	width:114px;
+	height: 114px;
+	border:10px solid #c77966;
+	border-radius: 57px;
+	line-height: 94px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	background: url(../img/down.png) 50% 90% no-repeat;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-left: 25%;
+}
+.systemBase .base2 .baseIntro{
+	margin-top: 20px;
+	font-family: '黑体';
+	font-size: 20px;
+	text-align: center;
+	display: none;
+}
+
+.obtain{
+	background-color: #fff;
+	margin: 0px;
+	padding:0px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+#obtainShow{
+	display: none;
+}
+
+.obtain .obtain1 .personalize{
+	background-color: #e3cda4;
+	height: 260px;
+}
+.obtain .obtain1 .personalize p{
+	text-align: center;
+	font-size: 20px;
+	font-family: '楷体';
+	font-weight: bold;
+}
+.obtain .obtain1 .personalize img{
+	margin: 60px auto;
+}
+.obtain .obtain1 .suggestion{
+	background-color: #c77966;
+	height: 260px;
+}
+.obtain .obtain1 .suggestion p{
+	text-align: center;
+	font-size: 20px;
+	font-family: '楷体';
+	font-weight: bold;
+}
+.obtain .obtain1 .suggestion img{
+	margin: 60px auto;
+}
+.obtain .obtain1 p{
+	padding: 0px 3px;
+}
+.obtain .obtain2 p{
+	font-size: 30px;
+	font-family: '隶书';
+	line-height: 260px;	
+	text-align: center;
+}
+
+.obtain .transverseLine{
+	margin-top: 60px;
+	border-bottom: 1px solid #7e827a;
+}
+.obtain .verticalLine{
+	border-right: 1px solid #7e827a;
+	height: 54px;
+}
+.obtain .startBtn p{
+	text-align: center;
+}
+.obtain .startBtn p a{
+	margin: 0 auto;
+	display: block;
+	width:120px;
+	border:5px solid #703030;
+	height: 50px;
+	line-height: 40px;
+	color: #703030;
+	font-size: 18px;
+	font-family: Lato,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.obtain .startBtn p a:hover{
+	background-color: #703030;
+	color: #fff;
+	text-decoration: none;
+}
+
+footer{
+	height: 100px;
+	background-color: #2f343b;
+}
+footer p{
+	color: #fff;
+	font-size: 16px;
+	line-height: 100px;
+	margin-left:10%;
+	margin-right: 10%;
+}
+footer p a{
+	padding: 0px 10px;
+}
+@media (max-width: 991px){
+	.masthead .row{
+		position: absolute;
+		width:100%;
+		bottom: 120px;
+		left: 2%;
+	}
+	.masthead .container-fluid p.choice{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.masthead .container-fluid p{
+		text-align: center;
+	}
+	.obtain .obtain2{
+		margin-bottom: 40px;
+	}
+	.obtain .obtain2 p{
+		font-size: 30px;
+		font-family: '隶书';
+		line-height: 100px;	
+		text-align: center;
+	}
+
+
+}
+@media (max-width: 767px){
+	.header h3{
+		text-align: center;
+	}
+
+	.masthead .container-fluid p.question{
+		font-size: 34px;
+	}
+	.masthead .container-fluid p img{
+		height: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.masthead .container-fluid p.intro{
+		font-size: 26px;
+	}
+	.masthead .container-fluid p.choice{
+		width: 240px;
+	}
+	.masthead .container-fluid p.choice a{
+		font-size: 18px;
+	}
+	.masthead .container-fluid p.choice span{
+		font-size: 14px;
+	}
+	
+	.systemBase{
+		margin-bottom: 0px;
+	}
+	.systemBase .base1 p{
+		font-size: 26px;
+		line-height: 160px;	
+	}
+
+	.systemBase .base2 .brief{
+		width:80px;
+		height: 80px;
+		border:6px solid #c77966;
+		border-radius: 40px;
+		line-height: 68px;
+		font-size: 18px;
+		margin: 0px auto;
+	}
+	.systemBase .base2 .baseIntro{
+		margin-top: 20px;
+		font-size: 16px;
+	}
+
+	.obtain .obtain1 .personalize{
+		height: 220px;
+	}
+	.obtain .obtain1 .personalize p{
+		font-size: 16px;
+	}
+	.obtain .obtain1 .personalize img{
+		margin: 40px auto;
+		height: 28px;
+	}
+	.obtain .obtain1 .suggestion{
+		height: 220px;
+	}
+	.obtain .obtain1 .suggestion p{
+		font-size: 16px;
+	}
+	.obtain .obtain1 .suggestion img{
+		margin: 40px auto;
+		height: 28px;
+	}
+	.obtain .obtain2 p{
+		font-size: 26px;
+		line-height: 160px;	
+	}
+	.obtain .obtain2{
+		margin-bottom: 0px;
+	}
+	/*footer*/
+	.container-fluid .row footer p{
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		line-height: 30px;
+	}
+	.row footer .text-left{
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 450px){
+	.header h3{
+		font-size: 20px;
+		line-height: 60px;
+		margin: 0px;
+	}
+	.container-fluid .row footer p{
+		font-size: 14px;
+	}
+	.container-fluid .row footer .text-right img{
+		height: 20px;
+	}
+}

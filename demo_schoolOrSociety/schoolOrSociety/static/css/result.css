@@ -1,0 +1,93 @@
+/*全局样式*/
+body{
+	word-break: break-all;
+	font-family: "Microsoft YaHei","Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+#resultDisplay .out-col{
+	background-color: #2f343b;
+}
+#resultDisplay .resultHead{
+	height: 260px;
+	padding:110px 0px;
+	width:100%;
+	margin: 0px;
+}
+#resultDisplay .resultHead p{
+	color: #fff;
+	font-size: 24px;
+}
+#resultDisplay .resultHead p.resultShow{
+	width: 30%;
+	height: 60px;
+	background-color: #7e827a;
+	border-radius: 5px;
+	line-height: 60px;
+	margin-top:-10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#resultDisplay .resultHead p.resultShow:hover{
+	background-color: #284907;
+	font-size:26px;
+}
+#resultDisplay .resultContent{
+	background-color: #fff;
+}
+#resultDisplay .resultContent .overall{
+	height: 100px;
+	background-color: #fff;
+	width: 80%;
+	font-size:24px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: -50px;
+}
+#resultDisplay .resultContent .overall p{
+	line-height: 100px;
+	color: #32331d;
+}
+#resultDisplay .resultContent .row{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#resultDisplay .resultContent .row p{
+	border:3px solid #703030;
+	border-radius: 10px;
+	line-height: 54px;
+	margin: 20px 30px;
+	height: 60px;
+	color: #2f343b;
+	font-size: 22px;
+}
+#resultDisplay .resultContent .row p:hover{
+	background-color: #703030;
+	color: #fff;
+	font-family: 'KaiTi_GB2312';
+	font-size:24px;
+	font-style: italic;
+}
+#resultDisplay .resultContent .influence p{
+	font-size:24px;
+	margin-top: 40px;
+}
+@media (max-width: 767px) {
+	#resultDisplay .resultHead{
+		padding-top:80px;
+	}
+	#resultDisplay .resultHead p{
+		font-size:20px;
+		text-align: center;
+	}
+	#resultDisplay .resultHead #result{
+		margin-top: 10px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+}
+@media (max-width: 500px){
+	#resultDisplay .resultHead p{
+		font-size: 18px;
+	}
+}
