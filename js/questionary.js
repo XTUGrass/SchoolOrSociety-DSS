@@ -12,6 +12,7 @@ addEvent($('sortFactors'),'click',function(event){
 	}
 	this.style.borderWidth='0px';
 	for(var i=0;i<sortFactorsInput.length;i++){
+		sortFactorsInput[i].value="-2";
 		sortFactorsInput[i].removeAttribute('disabled');
 	}
 	if(tar.nodeName.toLowerCase()=='input'){
@@ -26,9 +27,9 @@ addEvent($('sortFactors'),'click',function(event){
 			}
 		}else{
 			if(tar.checked==true){
-				sortFactorsArray.push(tar.value);//已选择项push进数组
+				sortFactorsArray.push(tar.name);//已选择项push进数组
 			}else if(tar.checked==false){
-				sortFactorsArray.removeByValue(tar.value);//选择后又删除的项也从数组中移除
+				sortFactorsArray.removeByValue(tar.name);//选择后又删除的项也从数组中移除
 				getSibling(tar).innerHTML='';
 			}else{
 			}		
@@ -39,13 +40,18 @@ addEvent($('sortFactors'),'click',function(event){
 	$('totalFactor1').innerHTML=sortFactorsArray.length;
 	//实时添加序号
 	for(var i=0;i<sortFactorsInput.length;i++){
-		var loca=sortFactorsArray.indexOf(sortFactorsInput[i].value);
+		var loca=sortFactorsArray.indexOf(sortFactorsInput[i].name);
 		
 		if(loca!=-1){
 			var orderSpan=getSibling(sortFactorsInput[i]);
 			orderSpan.innerHTML=(loca+1);
+			sortFactorsInput[i].value="-1";
 		}
 	}
+	for(var i=0;i<sortFactorsInput.length;i++){
+		console.log(sortFactorsInput[i].value);
+	}
+	
 		
 });
 
@@ -117,14 +123,12 @@ addEvent(document.body,'click',function(event){
 	if($('four2').checked==true||$('four3').checked==true||$('four4').checked==true){
 		$('beWork').style.display='list-item';
 		var inputWork=$('beWork').getElementsByTagName('input');
-		console.log(inputWork.length);
 		for(var i=0;i<inputWork.length;i++){
 			inputWork[i].required='required';
 		}
 	}else{
 		$('beWork').style.display='none';
 		var inputWork=$('beWork').getElementsByTagName('input');
-		console.log(inputWork.length);
 		for(var i=0;i<inputWork.length;i++){
 			inputWork[i].required=false;
 		}
