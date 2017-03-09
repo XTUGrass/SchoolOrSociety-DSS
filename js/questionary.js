@@ -1,6 +1,6 @@
 
 
-/*存放最终选择的影响因素的数组,已排序*/
+/*存放最终选择的影响因素的name的数组,已排序*/
 var sortFactorsArray=[];
 addEvent($('sortFactors'),'click',function(event){
 	var sortFactorsInput=$('sortFactors').getElementsByTagName('input');
@@ -44,8 +44,9 @@ addEvent($('sortFactors'),'click',function(event){
 		
 		if(loca!=-1){
 			var orderSpan=getSibling(sortFactorsInput[i]);
-			orderSpan.innerHTML=(loca+1);
-			sortFactorsInput[i].value="-1";
+			var nowNum=loca+1;
+			orderSpan.innerHTML=nowNum;
+			sortFactorsInput[i].value=nowNum;
 		}
 	}
 	for(var i=0;i<sortFactorsInput.length;i++){
