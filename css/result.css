@@ -71,6 +71,10 @@ body{
 	font-size:24px;
 	margin-top: 40px;
 }
+#resultDisplay .resultHead .resultTips{
+	font-size: 14px;
+	color: #E74C3C;
+}
 @media (max-width: 767px) {
 	#resultDisplay .resultHead{
 		padding-top:80px;

@@ -109,17 +109,11 @@ addEvent(document.getElementById('btn1'),'click',function(event){
 		for(var i=0;i<getElementsByClassName('error').length;i++){
 			if(getElementsByClassName('error')[i].style.display!='none'){
 				var scrollHei=getElementsByClassName('error')[i].offsetTop;
-				console.log(scrollHei);
 				window.scrollTo(100,scrollHei);
 				break;
 			}
 		}
-			
-
-			/*
-			
-			*/
-	},300)
+	},100)
 	
 });
 
